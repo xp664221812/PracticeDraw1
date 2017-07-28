@@ -37,7 +37,7 @@ public class Practice8DrawArcView extends View {
 
         paint.setStyle(Paint.Style.STROKE);
 
-        canvas.drawArc(400,300,700,700,-180,60,false,paint);
+        canvas.drawArc(400,300,1000,700,-180,60,false,paint);
 
     }
 }
