@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -27,6 +28,7 @@ public class Practice11PieChartView extends View {
         super.onDraw(canvas);
 
         Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
+        Path path=new Path();
         paint.setStyle(Paint.Style.FILL);
 
         paint.setColor(Color.parseColor("#CD0000"));
@@ -41,10 +43,30 @@ public class Practice11PieChartView extends View {
         paint.setColor(Color.GRAY);
         canvas.drawArc(180,130,880,830,11,5,true,paint);
 
+        paint.setColor(Color.parseColor("#008B45"));
+        canvas.drawArc(180,130,880,830,19,60,true,paint);
+
+        paint.setColor(Color.parseColor("#1C86EE"));
+        canvas.drawArc(180,130,880,830,82,100,true,paint);
+
+        paint.setColor(Color.WHITE);
+        paint.setTextSize(35);
+        paint.setStrokeWidth(3f);
+
+//        path.moveTo(50,50);
+        float[] points = {180,80,330,80,330,80,370,120
+                ,120,840,270,840,270,840,330,780
+                ,850,350,900,300,900,300,1000,300
+                ,885,485,980,485
+        };
+
+        canvas.drawText("Lollipop",30,90,paint);
+        canvas.drawText("KitKat",20,850,paint);
+        canvas.drawText("Marshmallow",1020,310,paint);
+        canvas.drawText("Froyo",1000,495,paint);
 
 
-
-
+        canvas.drawLines(points,paint);
 
 //        综合练习
 //        练习内容：使用各种 Canvas.drawXXX() 方法画饼图
