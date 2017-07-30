@@ -46,7 +46,7 @@ public class Practice10HistogramView extends View {
 
         //画矩形
         paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.GREEN);
+        paint.setColor(Color.parseColor("#00CD00"));
         canvas.drawRect(130,749,260,750,paint);
         canvas.drawRect(290,725,420,750,paint);
         canvas.drawRect(450,725,580,750,paint);
@@ -65,6 +65,9 @@ public class Practice10HistogramView extends View {
         canvas.drawText("KiKat",790,785,paint);
         canvas.drawText("L",980,785,paint);
         canvas.drawText("M",1140,785,paint);
+
+        paint.setTextSize(60);
+        canvas.drawText("直方图",620,900,paint);
 
 
 //        综合练习

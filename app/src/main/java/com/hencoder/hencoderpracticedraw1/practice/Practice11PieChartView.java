@@ -58,12 +58,22 @@ public class Practice11PieChartView extends View {
                 ,120,840,270,840,270,840,330,780
                 ,850,350,900,300,900,300,1000,300
                 ,885,485,980,485
+                ,883,510,930,510,930,510,960,540,960,540,1000,540
+                ,875,560,930,560,930,560,960,600,960,600,1000,600
+                ,790,720,840,750,840,750,990,750
         };
 
         canvas.drawText("Lollipop",30,90,paint);
         canvas.drawText("KitKat",20,850,paint);
         canvas.drawText("Marshmallow",1020,310,paint);
         canvas.drawText("Froyo",1000,495,paint);
+        canvas.drawText("Gingerbread",1020,550,paint);
+        canvas.drawText("Ice Cream Sandwitch",1020,610,paint);
+        canvas.drawText("Jelly Bean",1010,760,paint);
+
+        paint.setTextSize(60);
+        canvas.drawText("饼图",500,900,paint);
+
 
 
         canvas.drawLines(points,paint);
